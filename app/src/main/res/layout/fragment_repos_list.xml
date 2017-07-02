@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.jollypanda.gitforce.utils.SCREEN_STATE"/>
+        <variable name="presenter" type="com.jollypanda.gitforce.ui.presentation.ReposListPresenter"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:paddingBottom="@dimen/dp8">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srlReposList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvReposList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:visibility="@{presenter.screenState.equals(SCREEN_STATE.HAS_CONTENT) ? View.VISIBLE : View.GONE}"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/clProgress"
+            app:presenter="@{presenter}"
+            layout="@layout/view_progress"/>
+
+        <include
+            android:id="@+id/vEmptyReposList"
+            app:presenter="@{presenter}"
+            layout="@layout/view_empty_repos_list"/>
+
+        <include
+            android:id="@+id/vError"
+            app:presenter="@{presenter}"
+            layout="@layout/view_error"/>
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#24292E</color>
+    <color name="colorPrimaryDark">#000004</color>
+    <color name="colorAccent">#30CE54</color>
+    
+    <color name="textPrimary">#ffffff</color>
+
+    <color name="grey_600">#757575</color>
+
+    <color name="colorPrimary_op180">#b524292e</color>
+    <color name="headerColor">#616161</color>
+    <color name="background">#EEEEEE</color>
+    <color name="background_branch_blue">#2269AF</color>
+    <color name="background_branch_blue_half">#7e2269af</color>
+</resources>

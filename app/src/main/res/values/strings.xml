@@ -1,0 +1,28 @@
+<resources>
+    <string name="client_id" translatable="false">25d40aadf3d5b0c62b73</string>
+    <string name="client_secret" translatable="false">3e2bce6e91f8a9699b51bf6cc2836f506cb8868e</string>
+    <string name="redirect_uri" translatable="false">https://gitforce.im/callback</string>
+    <string name="app_name" translatable="false">GitForce</string>
+    <string name="title_login">Login</string>
+    <string name="btn_close">Close</string>
+    <string name="error_chech_internet">Check the internet state</string>
+    <string name="error">An error occurred, please retry the request</string>
+    <string name="btn_retry">Retry</string>
+    <string name="menu_repos_list">Repos list</string>
+    <string name="menu_gists" translatable="false">Gists</string>
+    <string name="menu_folowers">Folowers</string>
+    <string name="menu_logout">Logout</string>
+    <string name="title_main">Repos list</string>
+    <string name="stub">It\'s just a stub</string>
+    <string name="title_gists" translatable="false">Gists</string>
+    <string name="title_folowers">Folowers</string>
+    <string name="empty_repos_list">You do not have\nany repositories yet</string>
+    <string name="header_last_update">Last update:</string>
+    <string name="error_branch_list_is_empty">You do not have any branches yet</string>
+    <string name="error_empty_repo_name">Repo name is empty, please return and try again.</string>
+    <string name="hint_branches">Push the button to see commits</string>
+    <string name="header_author">Author:</string>
+    <string name="header_msg">Message:</string>
+    <string name="header_date">Date:</string>
+    <string name="error_commits_list_is_empty">You do not have any commits yet</string>
+</resources>

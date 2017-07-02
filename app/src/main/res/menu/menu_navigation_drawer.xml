@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menuReposList"
+            android:icon="@drawable/ic_list"
+            android:title="@string/menu_repos_list"/>
+        <item
+            android:id="@+id/menuGists"
+            android:icon="@drawable/ic_swap"
+            android:title="@string/menu_gists" />
+        <item
+            android:id="@+id/menuFolowers"
+            android:icon="@drawable/ic_folowers"
+            android:title="@string/menu_folowers" />
+        <item
+            android:id="@+id/menuLogout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

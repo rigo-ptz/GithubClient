@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="user" type="com.jollypanda.gitforce.data.network.models.UserResponse"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp16"
+        android:background="@color/headerColor">
+
+        <ImageView
+            android:id="@+id/ivUserLogo"
+            android:layout_width="@dimen/dp64"
+            android:layout_height="@dimen/dp64"
+            android:layout_margin="@dimen/dp16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:background="@color/colorAccent"
+            app:imageUrl="@{user.avatar}"/>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginLeft="@dimen/dp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivUserLogo"
+            android:text="@{user.name}"
+            tools:text="Konstantinopolskiy Konstantin"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/sp14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp4"
+            app:layout_constraintLeft_toRightOf="@+id/tvUserName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvUserName"
+            android:text='@{user.company != null ? "|" + " " + user.company : ""}'
+            tools:text="| GitHub"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/sp14"/>
+
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+            android:text="@{user.email}"
+            tools:text="konsta@gmail.com"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/sp14"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tvUserBio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserEmail"
+            android:text='@{user.bio}'
+            android:visibility='@{user.bio == null ? View.GONE : View.VISIBLE}'
+            tools:text="Lorem ipsum dolor sit amet"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/sp14"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

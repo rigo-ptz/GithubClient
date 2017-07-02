@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.jollypanda.gitforce.utils.SCREEN_STATE"/>
+        <variable name="presenter" type="com.jollypanda.gitforce.ui.presentation.BasePresenter"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Gitforce.Toolbar"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <WebView
+                android:id="@+id/wvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="@{presenter.screenState.equals(SCREEN_STATE.HAS_CONTENT) ? View.VISIBLE : View.GONE}"/>
+
+            <include
+                android:id="@+id/clProgress"
+                app:presenter="@{presenter}"
+                layout="@layout/view_progress"/>
+
+            <include
+                android:id="@+id/vError"
+                app:presenter="@{presenter}"
+                layout="@layout/view_error"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

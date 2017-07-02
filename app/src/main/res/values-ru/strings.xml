@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_login">Вход</string>
+    <string name="btn_close">Закрыть</string>
+    <string name="error_chech_internet">Проверьте соединение с интернетом</string>
+    <string name="error">Произошла ошибка, попробуйте повторить запрос</string>
+    <string name="btn_retry">Повторить</string>
+    <string name="empty_repos_list">У вас пока нет ни одного репозитория</string>
+    <string name="error_branch_list_is_empty">У вас пока нет ни одной ветки</string>
+    <string name="error_commits_list_is_empty">У вас пока нет ни одного коммита</string>
+    <string name="error_empty_repo_name">Ошибка при передаче имени репозитория. Пожалуйста, вернитесь и попробуйте еще раз</string>
+    <string name="header_author">Автор:</string>
+    <string name="header_date">Дата:</string>
+    <string name="header_last_update">Последнее обновление:</string>
+    <string name="header_msg">Сообщение:</string>
+    <string name="hint_branches">Нажмите на кнопку, чтобы увидеть коммиты</string>
+    <string name="menu_folowers">Подписчики</string>
+    <string name="menu_logout">Выход</string>
+    <string name="menu_repos_list">Список репозиториев</string>
+    <string name="stub">Заглушечка</string>
+    <string name="title_folowers">Подписчики</string>
+    <string name="title_gists"></string>
+    <string name="title_main">Список репозиториев</string>
+</resources>

@@ -1,0 +1,64 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.1.2-3'
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "io.realm:realm-gradle-plugin:3.3.1"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+
+    ext {
+        projectCompileSdkVersion = 25
+        projectBuildToolsVersion = "25.0.3"
+        projectMinSdkVersion = 15
+        projectTargetSdkVersion = 25
+        projectCodeVersion = 1
+        projectVersionName = "0.0.1"
+
+        mockitoVersion = '2.7.7'
+        junitVersion = '4.12'
+
+        supportLibraryVersion = '25.3.1'
+        constraintVersion = "1.0.2"
+
+        daggerVersion = "2.9"
+
+        retrofitVersion = '2.3.0'
+        okHttpVersion = '3.8.0'
+
+        gsonVersion = '2.8.1'
+
+        realmAnnotationsVersion = '3.3.2'
+
+        moxyVersion = '1.5.3'
+
+        rxandroidVersion = '2.0.1'
+        rxjavaVersion = '2.1.0'
+        rxkotlinVersion = '2.0.3'
+        rxbindingKotlinVersion = '2.0.0'
+        rxlifecycleVersion = '2.1.0'
+
+        databindingCompiler = '2.3.1'
+        dataBinding = "1.3.1"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
